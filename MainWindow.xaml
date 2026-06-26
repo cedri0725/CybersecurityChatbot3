@@ -1,0 +1,225 @@
+﻿<Window x:Class="CybersecurityChatbotWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cybersecurity Awareness Chatbot" 
+        Height="750" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#1A0A2E"
+        ResizeMode="CanResize">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- ASCII Art Banner -->
+        <Border Grid.Row="0" Background="#2D1B4E" CornerRadius="10" Margin="5" Padding="10" BorderBrush="#6A2BE2" BorderThickness="1">
+            <TextBlock x:Name="AsciiArt" 
+                       FontFamily="Consolas" 
+                       FontSize="9" 
+                       Foreground="#00FFAA"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap"/>
+        </Border>
+
+        <!-- User Info Panel -->
+        <Border Grid.Row="1" Background="#2D1B4E" CornerRadius="10" Margin="5" Padding="10" BorderBrush="#6A2BE2" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Your Name: " Foreground="#E94560" FontSize="14" FontWeight="Bold" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtUserName" 
+                         Width="180" 
+                         Height="30"
+                         Margin="10,0"
+                         Background="#1A0A2E"
+                         Foreground="#FFFFFF"
+                         BorderBrush="#9B59B6"
+                         BorderThickness="1"
+                         FontSize="13"/>
+                <Button x:Name="btnSaveName" 
+                        Content="Save" 
+                        Width="80" 
+                        Height="30"
+                        Background="#9B59B6"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        Click="BtnSaveName_Click"/>
+                <TextBlock x:Name="lblMemory" 
+                           Text="I'll remember you!" 
+                           Foreground="#BB86FC" 
+                           FontSize="12"
+                           VerticalAlignment="Center"
+                           Margin="20,0,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Sentiment & Memory Status -->
+        <Border Grid.Row="2" Background="#2D1B4E" CornerRadius="10" Margin="5,0,5,5" Padding="5" BorderBrush="#6A2BE2" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="lblSentiment" 
+                           Text="Sentiment: Neutral" 
+                           Foreground="#FFAA00" 
+                           FontSize="12"/>
+                <TextBlock x:Name="lblMemoryStatus" 
+                           Text="" 
+                           Foreground="#00FFAA" 
+                           FontSize="12"
+                           Margin="20,0,0,0"/>
+                <TextBlock x:Name="lblTopic" 
+                           Text="" 
+                           Foreground="#E94560" 
+                           FontSize="12"
+                           Margin="20,0,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Control Panel -->
+        <Border Grid.Row="3" Background="#2D1B4E" CornerRadius="10" Margin="5" Padding="5" BorderBrush="#6A2BE2" BorderThickness="1">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Voice:" Foreground="#FFFFFF" FontSize="12" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ToggleButton x:Name="btnVoiceOnOff" 
+                              Content="ON" 
+                              Width="50" 
+                              Height="25"
+                              Background="#00FFAA"
+                              Foreground="#1A0A2E"
+                              FontWeight="Bold"
+                              FontSize="11"
+                              IsChecked="True"
+                              Checked="BtnVoiceOnOff_Checked"
+                              Unchecked="BtnVoiceOnOff_Unchecked"
+                              Margin="0,0,5,0"/>
+                <Button x:Name="btnStopVoice" 
+                        Content="Stop" 
+                        Width="50" 
+                        Height="25"
+                        Background="#E94560"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        FontSize="11"
+                        Click="BtnStopVoice_Click"
+                        Margin="0,0,5,0"/>
+                <Button x:Name="btnVoice" 
+                        Content="Greeting" 
+                        Width="70" 
+                        Height="25"
+                        Background="#6A2BE2"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        FontSize="11"
+                        Click="BtnVoice_Click"
+                        Margin="0,0,5,0"/>
+                <Button x:Name="btnOpenTasks" 
+                        Content="Tasks" 
+                        Width="60" 
+                        Height="25"
+                        Background="#6A2BE2"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        FontSize="11"
+                        Click="BtnOpenTasks_Click"
+                        Margin="0,0,5,0"/>
+                <Button x:Name="btnOpenQuiz" 
+                        Content="Quiz" 
+                        Width="60" 
+                        Height="25"
+                        Background="#6A2BE2"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        FontSize="11"
+                        Click="BtnOpenQuiz_Click"
+                        Margin="0,0,5,0"/>
+                <Button x:Name="btnViewLogs" 
+                        Content="Logs" 
+                        Width="60" 
+                        Height="25"
+                        Background="#6A2BE2"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        FontSize="11"
+                        Click="BtnViewLogs_Click"
+                        Margin="0,0,5,0"/>
+                <Button x:Name="btnExitChat" 
+                        Content="Exit" 
+                        Width="60" 
+                        Height="25"
+                        Background="#FF4444"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        FontSize="11"
+                        Click="BtnExitChat_Click"
+                        Margin="0,0,0,0"/>
+            </WrapPanel>
+        </Border>
+
+        <!-- Chat Display Area -->
+        <Border Grid.Row="4" Background="#2D1B4E" CornerRadius="10" Margin="5" Padding="10" BorderBrush="#6A2BE2" BorderThickness="1">
+            <ScrollViewer x:Name="scrollViewer" VerticalScrollBarVisibility="Auto">
+                <RichTextBox x:Name="rtbChatDisplay" 
+                             IsReadOnly="True" 
+                             Background="#2D1B4E"
+                             Foreground="#FFFFFF"
+                             BorderBrush="Transparent"
+                             FontSize="14">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0,5,0,5"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Input Area -->
+        <Border Grid.Row="5" Background="#2D1B4E" CornerRadius="10" Margin="5" Padding="10" BorderBrush="#6A2BE2" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="txtUserInput" 
+                         Grid.Column="0"
+                         Height="45"
+                         VerticalContentAlignment="Center"
+                         Background="#1A0A2E"
+                         Foreground="#FFFFFF"
+                         BorderBrush="#9B59B6"
+                         BorderThickness="1"
+                         FontSize="14"
+                         KeyDown="TxtUserInput_KeyDown"/>
+
+                <Button x:Name="btnSend" 
+                        Grid.Column="1"
+                        Content="Send" 
+                        Width="80" 
+                        Height="45"
+                        Margin="5,0,0,0"
+                        Background="#9B59B6"
+                        Foreground="#FFFFFF"
+                        FontWeight="Bold"
+                        FontSize="13"
+                        Click="BtnSend_Click"/>
+            </Grid>
+        </Border>
+
+        <!-- Status Bar -->
+        <Border Grid.Row="6" Background="#2D1B4E" CornerRadius="10" Margin="5" Padding="8" BorderBrush="#6A2BE2" BorderThickness="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="lblStatus" 
+                           Text="Ready" 
+                           Foreground="#00FFAA" 
+                           FontSize="12"/>
+                <TextBlock Text=" | Ask about: passwords | scams | privacy | phishing | Type 'exit' to quit" 
+                           Foreground="#BB86FC" 
+                           FontSize="12"
+                           Margin="20,0,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
