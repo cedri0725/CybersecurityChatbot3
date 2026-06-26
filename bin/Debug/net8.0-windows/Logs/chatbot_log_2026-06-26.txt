@@ -1,0 +1,48 @@
+2026-06-26 11:11:29 - Welcome greeting played
+2026-06-26 11:11:29 - Chatbot started
+2026-06-26 11:11:42 - Voice responses disabled
+2026-06-26 11:11:44 - Voice responses enabled
+2026-06-26 11:11:45 - User saved name: Lesedi
+2026-06-26 11:11:53 - Task window opened
+2026-06-26 11:12:03 - Task window closed
+2026-06-26 11:12:03 - Opened Task Assistant
+2026-06-26 11:12:05 - Voice greeting played via button
+2026-06-26 11:12:14 - Viewed activity log
+2026-06-26 11:12:57 - Opened Quiz
+2026-06-26 11:13:04 - Viewed activity log
+2026-06-26 11:13:12 - User: passwords
+2026-06-26 11:13:13 - Bot: Enable Two-Factor Authentication (2FA) whenever po...
+2026-06-26 11:13:21 - User: passwords
+2026-06-26 11:13:21 - Bot: Use strong passwords with at least 12 characters i...
+2026-06-26 11:13:27 - User: scams
+2026-06-26 11:13:27 - Bot: Check for spelling errors, urgent language, and su...
+2026-06-26 11:13:37 - User: scams
+2026-06-26 11:13:38 - Bot: Never click on links in suspicious emails! Always ...
+2026-06-26 11:13:46 - User: privacy
+2026-06-26 11:13:47 - Bot: Review your privacy settings on social media regul...
+2026-06-26 11:13:55 - User: phishing
+2026-06-26 11:13:55 - Bot: Look for poor grammar, generic greetings, and mism...
+2026-06-26 11:14:07 - User: thank you
+2026-06-26 11:14:08 - Bot: You're welcome! Stay safe online!
+2026-06-26 11:14:13 - Chatbot exited by user
+2026-06-26 11:14:14 - Chatbot closed
+2026-06-26 11:18:06 - Welcome greeting played
+2026-06-26 11:18:06 - Chatbot started
+2026-06-26 11:18:13 - Speech stopped by user
+2026-06-26 11:18:21 - User saved name: Cedric
+2026-06-26 11:18:36 - User: I am not feeling well
+2026-06-26 11:18:37 - Bot: Hmm, I didn't catch that. You can ask me about pas...
+2026-06-26 11:18:43 - User: i am sad
+2026-06-26 11:18:43 - Bot: I'm sorry you're feeling that way. Would you like ...
+2026-06-26 11:18:52 - User: no
+2026-06-26 11:18:53 - Bot: Try asking: 'Tell me about password safety', 'How ...
+2026-06-26 11:19:02 - User: How to spot a scam
+2026-06-26 11:19:03 - Bot: Never click on links in suspicious emails! Always ...
+2026-06-26 11:19:18 - User: Tell me about password safety',
+2026-06-26 11:19:19 - Bot: That's a great question! Use strong passwords with...
+2026-06-26 11:19:31 - User: Privacy tips
+2026-06-26 11:19:31 - Bot: Be careful what you share online - once posted, it...
+2026-06-26 11:19:44 - User: phishing
+2026-06-26 11:19:45 - Bot: Never enter personal information on a site you rea...
+2026-06-26 11:19:51 - Chatbot exited by user
+2026-06-26 11:19:53 - Chatbot closed
